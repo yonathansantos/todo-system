@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calcular Area y Perimetro de figuras geometricas</title>
+</head>
+<body>
+    <script>
+        let figuraGeometrica=prompt("diga cual figura geometrica va a utilizar");
+        let base = 0;
+        let altura = 0;
+        let area = 0;
+        let perimetro = 0;
+        let lado1 = 0;
+        let lado2 = 0;
+        let lado3 = 0;
+        let lado4 = 0;
+        const pi = 3.14;
+        let diametro = 0;
+        let radio = 0;
+
+
+        switch (figuraGeometrica){
+            case 'triangulo': 
+               base= prompt('digite el valor de la base');
+               altura= prompt('digite el valor de la altura');
+             
+               area = base * altura / 2;
+               
+
+               lado1 = prompt('digite el valor para lado 1');
+               lado2 = prompt('digite el valor para lado 2');
+               lado3 = prompt('digite el valor para lado 3');
+
+               perimetro = parseInt(lado1) + parseInt(lado2) + parseInt(lado3);
+
+               document.write(' el area del triangulo es ' +  area + ' el perimetro del triangulo es ' + perimetro );
+
+              break
+            case 'cuadrado':
+               lado1 = prompt('digite el valor para lado 1');
+               lado2 = prompt('digite el valor para lado 2');
+               lado3 = prompt('digite el valor para lado 3');
+               lado4 = prompt('digite el valor para lado 4');
+
+               area = lado1 * lado2
+
+               perimetro = parseInt(lado1) + parseInt(lado2) + parseInt(lado3) + parseInt(lado4);
+
+               document.write(' el area del cuadrado es ' + area + ' el perimetro del cuadrado es ' + perimetro); 
+
+               break
+            case 'rectangulo':
+                base = prompt('digite el valor para base');
+                altura = prompt('digite el valor para altura');
+                area = base * altura
+
+                perimetro = (altura * 2) + ( base * 2);
+
+                document.write(' el area del rectangulo es ' + area + ' el perimetro del rectangulo es ' + perimetro);
+
+                break
+            case 'circulo':
+               radio = prompt(' digite el valor del radio ' );    
+               area = pi * (radio * radio) ;
+               diametro = prompt('digite el valor del diametro ');
+
+               perimetro = diametro * pi
+               document.write(' el area del circulo es ' + area + ' el perimetro del circulo es ' + perimetro );
+            
+            }
+
+     </script>
+        
+
+</body>
+</html>
+        
